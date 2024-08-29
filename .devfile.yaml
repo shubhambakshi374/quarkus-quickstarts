@@ -18,9 +18,6 @@ components:
           targetPort: 8080
           protocol: https
           path: /q/swagger-ui
-      env:
-        - name: CHE_PLUGIN_REGISTRY_URL
-          value: https://open-vsx.org
 commands:
   - exec:
       commandLine: mvn quarkus:dev
