@@ -19,7 +19,7 @@ build/
 graph-output.dot
 
 .settings
-.vscode
+#.vscode
 .project
 .classpath
 *.iml
