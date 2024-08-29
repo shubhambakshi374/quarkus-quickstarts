@@ -7,9 +7,6 @@ components:
       sourceMapping: /projects
       memoryLimit: 8Gi
       memoryRequest: 512Mi
-      volumeMounts:
-        - name: m2
-          path: /home/user/.m2
       image: registry.redhat.io/devspaces/udi-rhel8
       endpoints:
         - exposure: public
@@ -24,9 +21,6 @@ components:
       env:
         - name: CHE_PLUGIN_REGISTRY_URL
           value: https://open-vsx.org
-  - name: m2
-    volume:
-      size: 2Gi
 commands:
   - exec:
       commandLine: mvn quarkus:dev
